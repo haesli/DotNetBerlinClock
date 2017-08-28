@@ -24,6 +24,7 @@
 **/[Bb]in/
 **/[Oo]bj/
 **/[Ll]og/
+**/[Pp]ackages/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
