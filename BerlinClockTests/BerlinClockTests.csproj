@@ -60,8 +60,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\DotNetBerlinClock\BerlinClock.csproj">
-      <Project>{0451204D-BF86-43E1-B560-FC9AC830B9A9}</Project>
+    <ProjectReference Include="..\BerlinClock\BerlinClock.csproj">
+      <Project>{0451204d-bf86-43e1-b560-fc9ac830b9a9}</Project>
       <Name>BerlinClock</Name>
     </ProjectReference>
   </ItemGroup>

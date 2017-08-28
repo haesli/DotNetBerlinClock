@@ -11,7 +11,7 @@ namespace BerlinClockTests
         [ExpectedException(typeof(ArgumentException))]
         public void ConvertTime_InvalidTimeFormat_ThrowsException()
         {
-            var clock = new TimeConverter();
+            var clock = new Clock();
             clock.ConvertTime("Aug 10, 2017");
         }
 
@@ -19,21 +19,21 @@ namespace BerlinClockTests
         [ExpectedException(typeof(ArgumentException))]
         public void ConvertTime_InvalidHours_ThrowsException()
         {
-            var clock = new TimeConverter();
+            var clock = new Clock();
             clock.ConvertTime("24:00:01");
         }
 
         [TestMethod]
         public void ConvertTime_Midnight()
         {
-            var clock = new TimeConverter();
+            var clock = new Clock();
             var result = clock.ConvertTime("24:00:00");
             Assert.AreEqual(result,"Y\r\nRRRR\r\nRRRR\r\nOOOOOOOOOOO\r\nOOOO");
         }
         [TestMethod]
         public void ConvertTime_TwentyOneHoursFortyFiveMinutes()
         {
-            var clock = new TimeConverter();
+            var clock = new Clock();
             var result = clock.ConvertTime("21:45:00");
             Assert.AreEqual(result, "Y\r\nRRRR\r\nROOO\r\nYYRYYRYYROO\r\nOOOO");
         }
